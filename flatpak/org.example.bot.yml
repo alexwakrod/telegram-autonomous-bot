@@ -1,0 +1,16 @@
+app-id: org.example.bot
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+command: python3 /app/bot/main.py
+finish-args:
+  - --share=network
+  - --talk-name=org.freedesktop.secrets
+modules:
+  - name: python3-telethon
+    buildsystem: simple
+    build-commands:
+      - pip3 install --prefix=/app telethon sqlalchemy hypothesis python-dotenv
+    sources:
+      - type: dir
+        path: .

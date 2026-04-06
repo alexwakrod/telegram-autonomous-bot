@@ -1,0 +1,25 @@
+name: telegram-bot
+version: '1.0'
+summary: Autonomous Telegram bot with high concurrency
+description: |
+  Telegram bot with rate limiting, reminders, logging, and continuous fuzzing.
+base: core22
+confinement: strict
+apps:
+  bot:
+    command: bin/python3 $SNAP/bot/main.py
+    daemon: simple
+    plugs:
+      - network
+      - network-bind
+parts:
+  bot:
+    plugin: python
+    python-packages:
+      - telethon
+      - sqlalchemy
+      - hypothesis
+      - python-dotenv
+    source: .
+    stage-packages:
+      - sqlite3
