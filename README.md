@@ -43,7 +43,7 @@ The bot expects a PostgreSQL database with tables:
 - `reminders`
 - `moderation_rules`
 
-Run the migrations from the [dashboard repository](https://github.com/lelextb/telegram-bot-analytics-dashboard).
+Run the migrations from the [dashboard repository](https://github.com/alexwakrod/telegram-bot-analytics-dashboard).
 
 ## 🧪 Fuzzing
 ```bash
@@ -65,7 +65,7 @@ docker run --env-file .env telegram-bot
 ```
 
 ## 📈 Integration with Dashboard
-The bot writes to the same PostgreSQL database used by the [dashboard](https://github.com/lelextb/telegram-bot-analytics-dashboard).  
+The bot writes to the same PostgreSQL database used by the [dashboard](https://github.com/alexwakrod/telegram-bot-analytics-dashboard).  
 Once the dashboard is running, you will see:
 - Command heatmap
 - Hourly analytics
